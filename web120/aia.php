@@ -1,7 +1,7 @@
 <?php include "includes/header.php";?>
 <!--END header.php include-->
     
-<p>Lorem ipsum goes here. Lorem ipsum goes here. Lorem ipsum goes here. Lorem ipsum goes here. Lorem ipsum goes here. Lorem ipsum goes here. </p>
+<p>Here are some changes made for demonstration on GitHub.</p>
 
 <p>We'll put a responsive table in the left column to itemize our client and their audience's issue, concerns, and needs.</p>
     
