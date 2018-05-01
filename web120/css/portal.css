@@ -1,0 +1,165 @@
+/* My WEB120 Portal Website Styles */
+
+html {
+    background-color:#D6D4D5;
+    color:#181a1b;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+}
+
+div.wrapper {
+    background-color:#e6e5e6;
+    overflow:auto;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 3%;
+}
+
+h1>a {
+    text-decoration: none;
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px #ccc;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+h1>a:hover {
+    color: #000;
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: .5%;
+}
+
+a {
+    color:#7b8462;
+}
+
+a:hover {
+    color: #675a32;
+}
+
+.logo {
+    color:#212c45;
+    margin-left:1%;
+    text-shadow:1px 1px #ccc;
+    font-size:1.25em;
+}
+
+p {
+    padding: 0.5%;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+} 
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+	clear:both;
+    margin-left: .5%;
+    font-size: .7em;
+    padding-left: .5%;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+	
+   div.wrapper {
+		width:90%;
+		margin:auto;
+	}
+
+    section {
+		width:72%;
+		float:left;
+	}
+	
+     aside {	
+		width:22%;
+		float:right;
+        margin: 5% 2% 0 0;
+        background: rgba(0,0,0, .10);
+        padding: 1%;
+	}
+			
+	
+    img.desktop {
+        float:left;
+        max-height: 500px;
+        padding: 0 1.5% .5% .5%;
+   	 }
+    
+    img.tablet, img.phone {
+       		 display:none;
+    	}  
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        		background-color: #cacace;
+        	color:#000;
+   	 }
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {	
+	section {
+		width:60%;
+		float:left;
+        padding-left: 1%;
+	}
+	
+	aside {	
+		width:35%;
+		float:right;
+	}
+	
+    img.tablet {
+       	width:90%;
+        padding-right: 1.5%;
+           }
+    
+    img.phone, img.desktop {
+        		display:none;
+           } 
+    
+    /* Change background color of navigation on selected page */
+           ul.topnav li a.selected {
+        		background-color: #ccc;
+        		color:#000;
+          }
+  }
+
+
+/* PHONE */
+@media all and (max-width:736px) {
+    
+    img.phone {
+       		width:100%;
+    }
+    
+    img.tablet, img.desktop {
+        		display:none;
+    }  
+
+}
