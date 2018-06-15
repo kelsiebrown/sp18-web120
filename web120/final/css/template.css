@@ -1,0 +1,406 @@
+/* template.css page for final project template code */
+
+/*********** MAIN PAGE STYLES ***********/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.3em;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#main {
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+section {
+    padding: 2%;
+    margin-top: 2%;
+    float: left;
+    width: 64%
+}
+
+aside {
+    padding: 3%;
+    margin-top: 2%;
+    float: right;
+    width: 33%;
+    font-size: 1em;
+}
+
+.up_mobile {
+    display: none;
+}
+
+/* mobile layout */
+@media screen and (max-width: 880px) {
+    section {
+        width: 95%;
+        float: none;
+        margin: 0 auto;
+    }
+    
+    aside {
+        width: 95%;
+        margin: 0 auto;
+        float: none;
+    }
+    
+    .up {
+        display: none;
+    }
+    
+    .up_mobile {
+        display: block;
+        background-color: rgba(220,220,220,.8);
+    }
+}
+
+/* typography styles */
+
+h1 {
+    text-shadow: 2px 1px rgba(30,30,30,.9);
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+h1 a:hover {
+    color: #db7070;
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 5px;
+}
+
+h4 {
+    padding: 5px;
+}
+
+h4 + p {
+    padding-left: 12px;
+}
+
+a {
+    color: #db7070;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+p {
+    padding-bottom: 2%;
+    font-size: 1.1em;
+}
+
+
+/*********** NAV BAR STYLES ***********/
+
+/*** navbar default settings & mobile view ***/
+
+.navbar {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    background-image: linear-gradient(130deg, rgba(100,100,100,.8), rgba(255,255,255,.8));
+    padding-bottom: 10px;
+    height: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nav_main {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    background-color: #ccc;
+    border: 1px solid #000;
+    top: 60px;
+    position: absolute;
+    width: 100%;
+}
+
+#nav_main li {
+    text-align: center;
+    margin: 15px auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+.nav_li, #logo {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav_li:hover, #logo:hover, #navbar_toggle:hover {
+    color: #478cd1;
+}
+
+#logo {
+    z-index: 4;
+    display: block;
+    position: fixed;
+    top: -69px;
+    left: 0;
+}
+
+#navbar_toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #000;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+/*** navbar desktop & large tablet view ***/
+@media screen and (min-width: 880px) {
+    .navbar {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0;
+        height: 100px;
+        align-items: center;
+    }
+    
+    #nav_main {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: none;
+        border: none;
+        top: auto;
+        width: auto;
+    }
+    
+    .nav_li {
+        margin-left: 40px;
+    }
+    
+    #logo {
+        display: none;
+    }
+    
+    #navbar_toggle {
+        display: none;
+    }
+    
+    .parallax_header {
+        top: 200px;
+        left: 0;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+    }
+}
+
+
+/*********** HEADER STYLES ***********/
+
+/* desktop */
+@media screen and (min-width: 880px) {
+    .parallax_header {
+        width: 100%;
+        z-index: -1;
+        display: block;
+    }
+
+    .title {
+        display: block;
+        position: absolute;
+        bottom: 20%;
+        right: 4%;
+        background: radial-gradient(rgba(230,230,230,.8), rgba(220,220,220,.6));
+        text-align: right;
+        font-size: 1.5em;
+        padding: 2%;
+    }   
+}
+
+@media all and (max-width: 100px) {
+    .title {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+/* mobile & tablet */
+@media screen and (max-width: 880px) {
+    header {
+        height: auto;
+    }
+    
+    .parallax_header {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        display: block;
+        position: relative;
+        top: 97px;
+    }
+    
+    .title {
+        display: none;
+    } 
+    
+    h1 {
+        text-shadow: none;
+    }
+}
+
+
+/*********** FOOTER STYLES ***********/
+
+footer {
+    width: 100%;
+    clear: both;
+    background-color: #e6e6e6;
+    position: relative;
+    bottom: 0;
+}
+
+.parallax_footer {
+    width: 100%;
+}
+
+#copyright {
+    z-index: 3;
+    padding: 2%;
+    font-size: .7em;
+    font-style: italic;
+    position: relative;
+    bottom: -10%;
+    left: 0;
+    width: 50%;
+}
+
+#nav_footer {
+    float: right;
+    list-style-type: none;
+    text-align: right;
+    position: absolute;
+    bottom: 20%;
+    right: 1%;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#footer_text {
+    width: 100%;
+    background-color: #e6e6e6;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+#nav_footer li {
+    padding: 5px;
+}
+
+#logo_footer {
+    position: absolute;
+    bottom: -80px;
+    right: 345px;
+}
+
+/* mobile styles */
+@media screen and (max-width: 880px) {
+    .parallax_footer {
+        display: none;
+    }
+    
+    #copyright {
+        background-color: #e6e6e6;
+        text-align: center;
+        width: 100%;
+    }
+    
+    #nav_footer {
+        display: none;
+    }
+    
+    .up_mobile {
+        display: block;
+        z-index: 4;
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+        background-color: rgba(220,220,220,.95);
+        padding: 6px;
+    }
+    
+    .up_mobile a {
+        font-size: 1.1em;
+        color: #000;
+    }
+    
+    .up_mobile a:hover {
+        color: #db7070;
+    }
+}
+
+
+/* form styles */
+form {
+    padding-left: 2%;
+}
+
+input {
+    height: auto;
+    padding: 1%;
+}
+
+#submit {
+    padding: 10px;
+    margin-top: 2%;
+    background-color: #e6e6e6;
+}
+
+fieldset {
+    padding: .5%;
+    border: none;
+}
+
+textarea {
+    padding: 1%;
+}
+
+
+
+
+/* other assorted styles that don't fit anywhere else */
+
+.list li {
+    list-style-type: none;
+    margin-left: 3%;
+}
+
+aside img {
+    width: 100%;
+}
